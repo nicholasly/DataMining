@@ -77,7 +77,7 @@ x2 = X(2,:);
 x3 = X(3,:);
 
 k = 10;
-retained_var1 = sum(s(1:k))/sum(s(1:n));
+retained_var1 =  sum(s(1:k) .* s(1:k))/sum(s(1:n) .* s(1:n));
 Ureduce = U(:, 1:k);
 Y = X * Ureduce;
 Y = Y * Ureduce';
